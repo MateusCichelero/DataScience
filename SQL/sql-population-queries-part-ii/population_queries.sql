@@ -1,11 +1,12 @@
 -- How many entries in the database are from Africa?
-/*
+
 SELECT COUNT(*)
 FROM countries
 WHERE continent = 'Africa';
 
 
 -- What was the total population of Oceania in 2005?
+
 SELECT SUM(population)
 FROM population_years
 JOIN countries
@@ -14,6 +15,7 @@ WHERE continent = 'Oceania' AND year = 2005;
 
 
 -- What is the average population of countries in South America in 2003?
+
 SELECT AVG(population)
 FROM population_years
 JOIN countries
@@ -58,5 +60,3 @@ ON population_years.country_id = countries.id
 WHERE year = 2010
 GROUP BY 1
 ORDER BY 2 DESC;
-
-
